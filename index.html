@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dragonflix</title>
+    <style>
+        /* Definir o estilo da página */
+        body {
+            background-image: url('https://ogimg.infoglobo.com.br/in/23662327-553-bce/FT1086A/652/caverna_dragao.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        header {
+            font-size: 70px;
+            font-weight: bold;
+            color: #f00;
+            text-align: center;
+            margin-top: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Linha preta com opções clicáveis */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 0 20px;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #f00; /* Cor ao passar o mouse */
+            border-radius: 5px;
+        }
+
+        section {
+            text-align: center;
+            margin: 20px;
+        }
+
+        iframe {
+            margin-top: 20px;
+        }
+
+        .logo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 50px;
+            color: #f00;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilo para o vídeo principal e texto explicativo */
+        .main-content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap; /* Adicionando responsividade */
+        }
+
+        .main-video {
+            margin-right: 40px; /* Espaço entre o vídeo e o texto */
+        }
+
+        /* Estilo para o texto explicativo */
+        .story-text {
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .story-text h2 {
+            text-align: center;
+            color: #f00;
+        }
+
+        .story-text p {
+            color: #fff;
+        }
+
+        /* Estilo do carrossel de vídeos com 3 colunas */
+        .video-carousel {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+            gap: 20px;
+            padding: 20px;
+            margin-top: 40px;
+            justify-items: center;
+        }
+
+        .video-item {
+            width: 320px; /* Largura dos vídeos */
+            height: 180px; /* Altura dos vídeos */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .episode-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .video-carousel {
+                grid-template-columns: 1fr; /* Ajusta para uma coluna em telas pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+  
+    
+
+    <header>DRAGONFLIX</header>
+
+    <section>
+        <div>
+            <h1>A SÉRIE CAVERNA DO DRAGÃO</h1>
+            <p>#CAVERNADODRAGAO</p>
+        </div>
+    </section>
+
+    <!-- Vídeo principal à esquerda e história à direita -->
+    <section id="inicio" class="main-content">
+        <div class="main-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fElPC7K4cQk?si=CqMvnNOfoIkLIGQ6"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="story-text">
+            <h2>A História do Desenho Animado "Caverna do Dragão"</h2>
+            <p>“Caverna do Dragão” (Dungeons & Dragons) é uma série animada que mistura o mundo do RPG com uma história original. Seis jovens são transportados para um mundo fantástico e devem lutar para retornar ao seu próprio mundo, enfrentando o maligno Vingador e outras ameaças.</p>
+            <p>A série tornou-se um clássico cult, com personagens como Hank, Sheila, Eric, Diana, Presto e Bobby, que representam classes do RPG. Embora tenha sido cancelada antes de um final definitivo, a série é lembrada por sua influência na cultura dos RPGs e animações dos anos 80.</p>
+        </div>
+    </section>
+
+    <div class="logo">K</div>
+
+    <!-- Carrossel de vídeos com 3 colunas e rótulos de episódios -->
+    <section id="episodios">
+        <div class="video-carousel">
+            <!-- EPISÓDIO 1 -->
+            <div class="video-item">
+                <div class="episode-label">EPISÓDIO 1</div>
+                <iframe src="https://www.youtube.com/embed/fElPC7K4cQk?si=zgNFHAhc-D7MABH3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!-- EPISÓDIO 2 -->
+            <div class="video-item">
+                <div class="episode-label">EPISÓDIO 2</div>
+                <iframe src="https://www.youtube.com/embed/ojLwdR2ITXk?si=cvpJj_-3DQn75wUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!-- EPISÓDIO 3 -->
+            <div class="video-item">
+                <div class="episode-label">EPISÓDIO 3</div>
+                <iframe src="https://www.youtube.com/embed/KAF96yKhq0s?si=ShM-GQVj11tT7xjd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!-- EPISÓDIO 4 -->
+            <div class="video-item">
+                <div class="episode-label">EPISÓDIO 4</div>
+                <iframe src="https://www.youtube.com/embed/Fp2QEO5p-tY?si=-g0yhcXFbVK6yGvj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!-- EPISÓDIO 5 -->
+            <div class="video-item">
+                <div class="episode-label">EPISÓDIO 5</div>
+                <iframe src="https://www.youtube.com/embed/g0XA5kt2NQM?si=aXk6FP1qRFNOGxr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!-- EPISÓDIO 6 -->
+            <div class="video-item">
+                <div class="episode-label">EPISÓDIO 6</div>
+                <iframe src="https://www.youtube.com/embed/9iVQrRT9BLM?si=8itoNty9xwDSGrc_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!-- EPISÓDIO 7 -->
+            <div class="video-item">
+                <div class="episode-label">EPISÓDIO 7</div>
+                <iframe src="https://www.youtube.com/embed/9ZLdom2O2JQ?si=OLvBeCIPnHdug6b0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!-- EPISÓDIO 8 -->
+            <div class="video-item">
+                <div class="episode-label">EPISÓDIO 8</div>
+                <iframe src="https://www.youtube.com/embed/FB03-IZsQFI?si=BL8h91ruWrYIpLgu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!-- EPISÓDIO 9 -->
+            <div class="video-item">
+                <div class="episode-label">EPISÓDIO 9</div>
+                <iframe src="https://www.youtube.com/embed/rBhVwJrI0fg?si=U1IjVbPhTWp1NA0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    
